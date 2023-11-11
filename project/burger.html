@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="burger.css">
+    <title>Add to Cart</title>
+
+
+<script>
+    
+function calculateTotal() {
+        
+var total = 0;
+        
+var items = document.getElementsByName('item');
+
+        
+
+for (var i = 0; i < items.length; i++) {
+            
+if (items[i].checked) {
+              
+  total += parseFloat(items[i].value);
+          
+  }
+      
+  }
+
+       
+
+ document.getElementById("total").innerHTML = "Total: $" + total.toFixed(2);
+    
+}
+
+</script>
+
+</head>
+
+<body>
+  
+
+<header>
+<h1>Burger</h1>
+</header>  
+
+<div class="cover">
+<div class="product">
+        
+<img src="IMG_20231018_221432.jpg" alt="Product Image">
+        
+<h4>Whopper-Chicken-Burger</h4>
+        
+<p>Price:Rs.1200</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+ 
+  <label>
+        
+<input type="checkbox" name="item" value="1200.00"> Add item  
+ </label><br>
+
+         
+
+   
+ </div>
+
+
+<div class="product">
+        
+<img src="IMG_20231018_221438.jpg" alt="Product Image">
+        
+<h4>Spicy Chicken Burger</h4>
+        
+<p>Price:Rs.  1100</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+
+<input type="checkbox" name="item" value=" 1100.00"> Add item         
+</label>
+ </div>
+
+
+<div class="product">
+        
+<img src="IMG_20231018_221426.jpg" alt="Product Image">
+        
+<h4>Taxas Smokhehousen Chicken Whopper Meal</h4>
+        
+<p>Price:Rs. 1500</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+       
+<input type="checkbox" name="item" value="1500.00"> Add item         
+</label>
+ </div>
+
+
+<div class="product">
+        
+<img src="IMG_20231018_221444.jpg" alt="Product Image">
+        
+<h4>Big King Veggie Burger Meal</h4>
+        
+<p>Price:Rs. 1800</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+        
+<input type="checkbox" name="item" value="1800.00"> Add item         
+</label> 
+ </div>
+
+
+</div>
+
+
+<hr color="red" size="10%">
+
+
+
+<br><br><br><br><br>
+<div class="product">
+ 
+<button onclick="calculateTotal()">Calculate Total</button><br>
+
+   
+ <div id="total"></div>
+<br><br><br>
+<a href="ss.html"><button id="add-to-cart">Check Out</button>
+   
+
+</div>
+</body>
+
+</html>

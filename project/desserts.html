@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+<meta charset="UTF-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<link rel="stylesheet" href="desserts.css">
+    
+<title>Add to Cart</title>
+
+
+<script>
+    
+function calculateTotal() {
+        
+var total = 0;
+        
+var items = document.getElementsByName('item');
+
+        
+
+for (var i = 0; i < items.length; i++) {
+            
+if (items[i].checked) {
+              
+  total += parseFloat(items[i].value);
+          
+  }
+      
+  }
+
+       
+
+ document.getElementById("total").innerHTML = "Total: $" + total.toFixed(2);
+    
+}
+
+</script>
+
+</head>
+
+<body>
+  
+
+<header>
+<h1>Desserts</h1>
+</header>  
+
+<div class="cover">
+<div class="product">
+        
+<img src="1335953470982_caffe_latte.jpg" alt="Product Image">
+        
+<h4>Cafe Latte</h4>
+        
+<p>Price:Rs. 950</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+ 
+  <label>
+        
+<input type="checkbox" name="item" value="950.00"> Add item  
+ </label><br>
+
+         
+
+   
+ </div>
+
+
+<div class="product">
+        
+<img src="1595413439932_dsc_5707_m.jpg" alt="Product Image">
+        
+<h4>Java chocolte anightmare</h4>
+        
+<p>Price:Rs.910</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+
+<input type="checkbox" name="item" value="910.00"> Add item         
+</label>
+ </div>
+
+
+<div class="product">
+        
+<img src="1599130483553_dsc_9319_m.jpg" alt="Product Image">
+        
+<h4>Java Oreo Coockie And Cream
+</h4>
+        
+<p>Price:Rs. 1100</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+       
+<input type="checkbox" name="item" value="1100.00"> Add item         
+</label>
+ </div>
+
+
+<div class="product">
+        
+<img src="1669705636114_dsc_0385_m.jpg" alt="Product Image">
+        
+<h4>Java Chip Cream Frappe</h4>
+        
+<p>Price:Rs. 1,380</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+        
+<input type="checkbox" name="item" value="1,380.00"> Add item         
+</label> 
+ </div>
+
+
+
+<div class="product">
+        
+<img src="1680077803251_dsc_2501_m.jpg" alt="Product Image">
+        
+<h4>Troopical Delight</h4>
+        
+<p>Price:Rs. 990</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+        
+<input type="checkbox" name="item" value=" 990.00"> Add item         
+</label> 
+ </div>
+
+
+
+
+<div class="product">
+        
+<img src="IMG_20231018_220924.jpg" alt="Product Image">
+        
+<h4>Granola Fruit Parfait</h4>
+        
+<p>Price:Rs.1150</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+     
+<input type="checkbox" name="item" value="1150.00"> Add item         
+</label> 
+ </div>
+</div>
+
+
+<hr color="red" size="10%">
+
+
+
+<br><br><br><br><br>
+<div class="product">
+ 
+<button onclick="calculateTotal()">Calculate Total</button><br>
+
+   
+ <div id="total"></div>
+<br><br><br>
+<a href="ss.html"><button id="add-to-cart">Check Out</button>
+   
+
+</div>
+</body>
+
+</html>

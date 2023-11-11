@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+<meta charset="UTF-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<link rel="stylesheet" href="others.css">
+    
+<title>Add to Cart</title>
+
+
+<script>
+    
+function calculateTotal() {
+        
+var total = 0;
+        
+var items = document.getElementsByName('item');
+
+        
+
+for (var i = 0; i < items.length; i++) {
+            
+if (items[i].checked) {
+              
+  total += parseFloat(items[i].value);
+          
+  }
+      
+  }
+
+       
+
+ document.getElementById("total").innerHTML = "Total: $" + total.toFixed(2);
+    
+}
+
+</script>
+
+</head>
+
+<body>
+  
+
+<header>
+<h1>Others</h1>
+</header>  
+
+<div class="cover">
+<div class="product">
+        
+<img src="1653892192923_13polpittu_m.jpg" alt="Product Image">
+        
+<h4>Pol Pittu With Katta Sambol</h4>
+        
+<p>Price:Rs. 900</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+ 
+  <label>
+        
+<input type="checkbox" name="item" value="900.00"> Add item  
+ </label><br>
+
+         
+
+   
+ </div>
+
+
+<div class="product">
+        
+<img src="1653893167508_14stringhoppers_m.jpg" alt="Product Image">
+        
+<h4>String Hoppers</h4>
+        
+<p>Price:Rs. 600</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+
+<input type="checkbox" name="item" value="600.00"> Add item         
+</label>
+ </div>
+
+
+<div class="product">
+        
+<img src="IMG_20231018_220849.jpg" alt="Product Image">
+        
+<h4>Spaghettti</h4>
+        
+<p>Price:Rs. 1000</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+       
+<input type="checkbox" name="item" value="1000.00"> Add item         
+</label>
+ </div>
+
+
+<div class="product">
+        
+<img src="IMG_20231018_220857.jpg" alt="Product Image">
+        
+<h4>Penne Pasta With Arabiata Sause/h4>
+        
+<p>Price:Rs. 1200</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+        
+<input type="checkbox" name="item" value="1200.00"> Add item         
+</label> 
+ </div>
+
+
+
+
+</div>
+
+
+<hr color="red" size="10%">
+
+
+
+<br><br><br><br><br>
+<div class="product">
+ 
+<button onclick="calculateTotal()">Calculate Total</button><br>
+
+   
+ <div id="total"></div>
+<br><br><br>
+<a href="ss.html"><button id="add-to-cart">Check Out</button>
+   
+
+</div>
+</body>
+
+</html>

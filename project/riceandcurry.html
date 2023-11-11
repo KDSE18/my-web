@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    
+<meta charset="UTF-8">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<link rel="stylesheet" href="riceandcurry.css">
+    
+<title>Rice And Curry</title>
+
+
+<script>
+    
+function calculateTotal() {
+        
+var total = 0;
+        
+var items = document.getElementsByName('item');
+
+        
+
+for (var i = 0; i < items.length; i++) {
+            
+if (items[i].checked) {
+              
+  total += parseFloat(items[i].value);
+          
+  }
+      
+  }
+
+       
+
+ document.getElementById("total").innerHTML = "Total: $" + total.toFixed(2);
+    
+}
+
+</script>
+
+</head>
+
+<body>
+  
+
+<header>
+<h1>Rice And Curry</h1>
+</header>  
+
+<div class="cover">
+<div class="product">
+        
+<img src="1607658862183_1.jpg" alt="Product Image">
+        
+<h4>Yellow Rice And Curry With Fish Devilled</h4>
+        
+<p>Price:Rs. 700</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+ 
+  <label>
+        
+<input type="checkbox" name="item" value="700.00"> Add item  
+ </label><br>
+
+         
+
+   
+ </div>
+
+
+<div class="product">
+        
+<img src="1607662165346_15.jpg" alt="Product Image">
+        
+<h4>Fried Rice And Curry With Chicken Deviled</h4>
+        
+<p>Price:Rs. 750</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+
+<input type="checkbox" name="item" value="750.00"> Add item         
+</label>
+ </div>
+
+
+<div class="product">
+        
+<img src="1641287842938_ricecurryveg_m.jpg" alt="Product Image">
+        
+<h4>Rice And Curry vegetable</h4>
+        
+<p>Price:Rs.650</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+       
+<input type="checkbox" name="item" value="650.00"> Add item         
+</label>
+ </div>
+
+
+<div class="product">
+        
+<img src="1643083505881_j_m.jpg" alt="Product Image">
+        
+<h4>Rice And Curry With DevillednPrawns</h4>
+        
+<p>Price:Rs. 750</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+        
+<input type="checkbox" name="item" value=" 750.00"> Add item         
+</label> 
+ </div>
+
+
+
+<div class="product">
+        
+<img src="IMG_20231018_133108.jpg" alt="Product Image">
+        
+<h4>Rice And Curry Eith Chicken Curry</h4>
+        
+<p>Price:Rs.  700</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+        
+<input type="checkbox" name="item" value=" 700.00"> Add item         
+</label> 
+ </div>
+
+
+
+
+
+
+</div>
+
+
+<hr color="red" size="10%">
+
+
+
+<br><br><br><br><br>
+<div class="product">
+ 
+<button onclick="calculateTotal()">Calculate Total</button><br>
+
+   
+ <div id="total"></div>
+<br><br><br>
+<a href="ss.html"><button id="add-to-cart">Check Out</button>
+   
+
+</div>
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="biriyani.css">
+    <title>Add to Cart</title>
+
+
+<script>
+    
+function calculateTotal() {
+        
+var total = 0;
+        
+var items = document.getElementsByName('item');
+
+        
+
+for (var i = 0; i < items.length; i++) {
+            
+if (items[i].checked) {
+              
+  total += parseFloat(items[i].value);
+          
+  }
+      
+  }
+
+       
+
+ document.getElementById("total").innerHTML = "Total: $" + total.toFixed(2);
+    
+}
+
+</script>
+
+</head>
+
+<body>
+  
+
+<header>
+<h1>Biriyani</h1>
+</header>  
+
+<div class="cover">
+<div class="product">
+        
+<img src="IMG_20231018_220818.jpg" alt="Product Image">
+        
+<h4>Specil Couple Pot Biriyani</h4>
+        
+<p>Price:Rs.1230</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+ 
+  <label>
+        
+<input type="checkbox" name="item" value="1230.00"> Add item  
+ </label><br>
+
+         
+
+   
+ </div>
+
+
+<div class="product">
+        
+<img src="IMG_20231018_220829.jpg" alt="Product Image">
+        
+<h4>Chicken Dum Pot Biriyani</h4>
+        
+<p>Price:Rs.  3000</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+
+<input type="checkbox" name="item" value=" 3000.00"> Add item         
+</label>
+ </div>
+
+
+<div class="product">
+        
+<img src="IMG_20231018_220835.jpg" alt="Product Image">
+        
+<h4>Vegitable Biriyani Pot </h4>
+        
+<p>Price:Rs. 2500</p>
+       
+ <label for="quantity">Quantity:</label>
+        
+<input type="number" id="quantity" name="quantity" value="1">
+       
+<input type="checkbox" name="item" value="2500.00"> Add item         
+</label>
+ </div>
+
+
+
+</div>
+
+
+<hr color="red" size="10%">
+
+
+
+<br><br><br><br><br>
+<div class="product">
+ 
+<button onclick="calculateTotal()">Calculate Total</button><br>
+
+   
+ <div id="total"></div>
+<br><br><br>
+<a href="ss.html"><button id="add-to-cart">Check Out</button>
+   
+
+</div>
+</body>
+
+</html>
